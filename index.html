@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+	<title>Find the bug</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body class="main">
+  <div class = "card-table">
+      <h2 class = "title">Выберите уровень сложности:</h2>
+      <p class = "subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+      <div class="menu">
+        <input class="difficulty-level" type="radio" name = "level" value="1" id="level-1">
+        <label class="btn-level-text" for="level-1"> Простой </label>
+        <input class="difficulty-level" type="radio" name = "level" value="2" id="level-2">
+        <label class="btn-level-text" for="level-2"> Средний </label>
+        <input class="difficulty-level" type="radio" name = "level" value="3" id="level-3">
+        <label class="btn-level-text" for="level-3"> Сложный </label>
+      </div>
+      <button class="btn">Начать игру</button>
+      <div class="cards">
+        <img class="card" src="img/shirt_card.png" alt="card">
+        <img class="card_rotate" src="img/shirt_card.png" alt="card">
+      </div>
+
+  </div>
+  <script src="./script.js" type="text/javascript"></script>
+</body>
+</html>
