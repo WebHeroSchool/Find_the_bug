@@ -4,7 +4,7 @@
     height: 100%;
 }
 
-.card-table {
+.content {
   margin: 246px 0 0 143px;
 }
 
@@ -69,13 +69,67 @@
   left: 60%;
 }
 
-.card {
+.card-img1 {
   transform: rotate(12deg);
 }
 
-.card_rotate {
+.card-img2 {
   transform: rotate(39deg);
   position: relative;
   right: 34px;
   top: 27px;
+}
+
+.card-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: transparent;
+  margin: 24px 24px 0 0;
+  width: 218px;
+  height: 341px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.shirt-card {
+  background: no-repeat url(img/shirt_card.png);
+}
+
+.bug-card {
+  background: no-repeat url(img/bug_card.png);
+  transform: rotateY(180deg);
+}
+
+.game-over-card {
+  background: no-repeat url(img/game_over_card.png);
+  transform: rotateY(180deg);
+}
+
+
+.rotation {
+  transform: rotateY(180deg);
+}
+
+.shirt-card, .bug-card, .game-over-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+.deactivate {
+  display: none;
 }
