@@ -125,10 +125,10 @@
   transform-style: preserve-3d;
 }
 
-.card:hover {
+/*.card:hover {
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
   transform: translateY(-30px) rotateZ(-2deg);
-}
+}*/
 
 .shirt-card {
   background: no-repeat url(img/shirt_card.png);
