@@ -12,14 +12,23 @@
       <h2 class = "title">Выберите уровень сложности:</h2>
       <p class = "subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
       <div class="menu">
-        <input class="difficulty-level" type="radio" name = "level" value="3" id="level-1">
-        <label class="btn-level-text" for="level-1"> Простой </label>
-        <input class="difficulty-level" type="radio" name = "level" value="6" id="level-2">
-        <label class="btn-level-text" for="level-2"> Средний </label>
-        <input class="difficulty-level" type="radio" name = "level" value="10" id="level-3">
-        <label class="btn-level-text" for="level-3"> Сложный </label>
+        <div class="form_radio">
+          <input class="difficulty-level" type="radio" name = "level" value="3" id="level-1">
+          <label class="btn-level-text" for="level-1"> Простой </label>
+        </div>
+        
+        <div class="form_radio">
+          <input class="difficulty-level" type="radio" name = "level" value="6" id="level-2">
+          <label class="btn-level-text" for="level-2"> Средний </label>
+        </div>
+        
+        <div class="form_radio">
+          <input class="difficulty-level" type="radio" name = "level" value="9" id="level-3">
+          <label class="btn-level-text" for="level-3"> Сложный </label>
+        </div>
+        
       </div>
-      <a href="#" class="btn" onclick="openCardTable()">Начать игру</a>
+      <button href="#" class="btn" onclick="openCardTable()">Начать игру</button>
       <div class="cards">
         <img class="card-img1" src="img/shirt_card.png" alt="card">
         <img class="card-img2" src="img/shirt_card.png" alt="card">
@@ -29,12 +38,8 @@
 
   <div class = "card-table deactivate" id="card-table">
     <div class="card" id="card">
-      <div class="card-inner" id = "inner">
-        <div class="shirt-card">
-        </div>
-        <div class="game-over-card">
-        </div>
-      </div>
+        <div class="shirt-card"></div>
+        <div class="game-over-card"></div>
     </div>
   </div>
   <script src="./script.js" type="text/javascript"></script>

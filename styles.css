@@ -1,31 +1,35 @@
 .main {
-  background: no-repeat center/100% url(img/Background.png);
+  background: repeat url(img/Background.png);
     width: 100%;
     height: 100%;
 }
 
 .content {
-  margin: 246px 0 0 143px;
+  margin: 129px 0 0 96px;
 }
 
 .title {
   font: 700 57px/67px 'Roboto', Arial, sans-serif;
   color: #fff;
-  letter-spacing: 1px;
+  margin: 0 0;
 }
 
 .subtitle {
   font: 400 19px/22px 'Roboto', Arial, sans-serif;
   color: #fff;
-  letter-spacing: 1px;
+  margin: 9px 1px;
 }
 
 .menu {
-  margin-top: 60px;
+  margin-top: 35px;
   font: 700 50px/59px 'Roboto', Arial, sans-serif;
   color: #fff;
   display: flex;
   flex-direction: column;  
+}
+
+.form_radio {
+  margin: 24px 0 0 -39px;
 }
 
 .difficulty-level {
@@ -33,40 +37,59 @@
 }
 
 .btn-level-text {
-  margin: 24px 0 0 41px;
+  margin: 24px 0 0 0;
 }
 
-.difficulty-level+label:hover:before {
+/*.difficulty-level+label:hover:before {*/
+  .btn-level-text:before {
   content: '';
   display: inline-block;
   width: 18px;
   height: 18px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  transform: rotate(45deg);
+  transform: rotate(45deg)  translateY(-12px);
   background-color:  #d62b2e;
-  margin-right: 0.5em;
+  margin-right: 24px;
   background-repeat: no-repeat;
   background-position: center center;
+  opacity: 0;
 }
 
+.btn-level-text:hover:before {
+  opacity: 1;
+}
+
+.form_radio input[type=radio]:checked + label:before {
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg) translateY(-12px);
+  background-color:  #d62b2e;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 1;
+}
+
+.form_radio input[type=radio]:disabled + label:before {
+	filter: grayscale(100%);
+}
+
+
 .btn {
-  height: 95px;
-  width: 352px;
+  height: 94px;
+  width: 351px;
   border: none;
   border-radius: 7px;
   cursor: pointer;
   font: 700 32px/37px 'Roboto', Arial, sans-serif;
   background-color: #d62b2e;
   color: #fff;
-  margin-top: 141px;
+  margin-top: 115px;
 }
 
 .cards {
   display: flex;
   position: absolute;
-  top: 629px;
-  left: 60%;
+  top: 531px;
+  left: 61.6%;
 }
 
 .card-img1 {
@@ -76,15 +99,19 @@
 .card-img2 {
   transform: rotate(39deg);
   position: relative;
-  right: 34px;
-  top: 27px;
+  right: 36px;
+  top: 18px;
 }
 
 .card-table {
   display: flex;
   flex-wrap: wrap;
+  position: absolute;
+  top: 48.7%;
+  left: 50.7%;
+  width: 67%;
+  transform: translate(-50%, -50%);
   justify-content: center;
-  align-items: center;
 }
 
 .card {
@@ -92,15 +119,15 @@
   margin: 24px 24px 0 0;
   width: 218px;
   height: 341px;
-}
-
-.card-inner {
   position: relative;
-  width: 100%;
-  height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+}
+
+.card:hover {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-30px) rotateZ(-2deg);
 }
 
 .shirt-card {
@@ -132,4 +159,141 @@
 
 .deactivate {
   display: none;
+}
+
+
+@media (max-width: 720px) {
+  .content {
+    margin: 80px 0 0 50px;
+  }
+  .title {
+    font: 700 35px/45px 'Roboto', Arial, sans-serif;
+ }
+  
+  .subtitle {
+    font: 400 12px/18px 'Roboto', Arial, sans-serif;
+    width: 90%;
+  }
+
+  .form_radio {
+    margin: 15px 0 0 -39px;
+  }
+
+  .btn-level-text:before {
+    width: 10px;
+    height: 10px;
+  }
+ 
+  .form_radio input[type=radio]:checked + label:before {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .menu {
+    margin-top: 30px;
+    font: 700 30px/39px 'Roboto', Arial, sans-serif;
+  }
+
+  .btn {
+    height: 70px;
+    width: 220px;
+    font: 700 20px/28px 'Roboto', Arial, sans-serif;
+    margin-top: 80px;
+  }
+  
+  .cards {
+    display: none;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 900px) {
+  .title {
+    font: 700 40px/55px 'Roboto', Arial, sans-serif;
+ }
+  
+  .subtitle {
+    font: 400 14px/20px 'Roboto', Arial, sans-serif;
+    width: 90%;
+  }
+
+  .form_radio {
+    margin: 20px 0 0 -39px;
+  }
+
+  .btn-level-text:before {
+    width: 12px;
+    height: 12px;
+  }
+ 
+  .form_radio input[type=radio]:checked + label:before {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .menu {
+    margin-top: 30px;
+    font: 700 35px/49px 'Roboto', Arial, sans-serif;
+  }
+
+  .btn {
+    height: 80px;
+    width: 250px;
+    font: 700 22px/30px 'Roboto', Arial, sans-serif;
+    margin-top: 80px;
+  }
+  
+  .cards {
+    display: flex;
+    position: absolute;
+    top: 531px;
+    left: 50%;
+  }
+  .card-img2,
+  .card-img1 {
+    width: 20vw;
+    height: 23vw;
+    min-width: 166px;
+    min-height: 257px;
+  }
+
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .title {
+    font: 700 47px/57px 'Roboto', Arial, sans-serif;
+ }
+  
+  .subtitle {
+    font: 400 14px/20px 'Roboto', Arial, sans-serif;    
+    width: 90%;
+  }
+
+  .btn-level-text:before {
+    width: 15px;
+    height: 15px;
+  }
+ 
+  .form_radio input[type=radio]:checked + label:before {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .menu {
+    margin-top: 30px;
+    font: 700 40px/59px 'Roboto', Arial, sans-serif;
+  }
+
+  .btn {
+    height: 90px;
+    width: 300px;
+    font: 700 25px/30px 'Roboto', Arial, sans-serif;
+    margin-top: 100px;
+  }
+  
+  .cards {
+    display: flex;
+    position: absolute;
+    top: 531px;
+    left: 50%;
+  }
 }
