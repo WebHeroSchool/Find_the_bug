@@ -13,19 +13,23 @@ function getRandomInt(min, max) {
   content.classList.remove("deactivate");
   cardTable.classList.add("deactivate");
 
+  //удаляем класс с переворотом
+  document.querySelectorAll(".rotation").forEach((elemRotation) => elemRotation.classList.remove("rotation"));
+  
   //удалили все карты-копии 
-  document.querySelectorAll('.copy').forEach(elem => elem.remove());
+  document.querySelectorAll(".copy").forEach((elem) => elem.remove());
 }
 
 /* Функция выполняет непосредственно переворот карты и 
 навешивает событие по рестарту для каждой карты*/
 function rotationCart() {
   this.classList.add("rotation");
-  
+  let cards = document.getElementsByClassName("card");;
+
   //удаляем у всех карт событие переворота
-  Array.from(cards).forEach(card => card.removeEventListener("click", rotationCart));
+  Array.from(cards).forEach((card) => card.removeEventListener("click", rotationCart));
   //добавляем всем картам событие рестарта 
-  Array.from(cards).forEach(card => card.addEventListener("click", restartCartTable));
+  Array.from(cards).forEach((card) => card.addEventListener("click", restartCartTable));
 }
 
 //Установим количество карт на столе согластно уровню сложности
@@ -48,9 +52,9 @@ function setCards (level) {
 
 //функция по созданию события поворота на каждую карту
 function flipCard(level) {
-  flipCards = document.getElementsByClassName("card");
+  let flipCards = document.getElementsByClassName("card");
   for (let i=0; i<flipCards.length; i++) {
-    flipCards[i].addEventListener('click', rotationCart);
+    flipCards[i].addEventListener("click", rotationCart);
   }
 }
 
@@ -58,7 +62,7 @@ function flipCard(level) {
 function openCardTable() {
  
   let level = document.querySelector("input[name='level']:checked").value;
-  if (level.length === 0) return;
+  if (level.length === 0) { return; }
 
   content.classList.add("deactivate");
   cardTable.classList.remove("deactivate");

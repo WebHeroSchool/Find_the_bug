@@ -127,13 +127,6 @@
   background: no-repeat url(img/shirt_card.png);
 }
 
-.shirt-card:hover {
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
-  transform: translateY(-30px) rotateZ(-2deg);
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
 .bug-card {
   background: no-repeat url(img/bug_card.png);
   transform: rotateY(180deg);
@@ -158,6 +151,13 @@
   backface-visibility: hidden;
 }
 
+.shirt-card:hover {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-30px) rotateZ(-2deg);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
 .deactivate {
   display: none;
 }
@@ -170,7 +170,7 @@
   .title {
     font: 700 35px/45px 'Roboto', Arial, sans-serif;
   }
-  
+
   .subtitle {
     font: 400 12px/18px 'Roboto', Arial, sans-serif;
     width: 90%;
@@ -185,7 +185,7 @@
     height: 10px;
   }
  
-  .form-radio input[type=radio]:checked + label:before {
+  .form-radio input[type=radio]:checked + label::before {
     width: 10px;
     height: 10px;
   }
@@ -257,14 +257,13 @@
     min-width: 166px;
     min-height: 257px;
   }
-
 }
 
 @media (min-width: 901px) and (max-width: 1024px) {
   .title {
     font: 700 47px/57px 'Roboto', Arial, sans-serif;
  }
-  
+
   .subtitle {
     font: 400 14px/20px 'Roboto', Arial, sans-serif;
     width: 90%;
