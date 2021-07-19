@@ -15,6 +15,9 @@ function getRandomInt(min, max) {
 
   //удаляем класс с переворотом
   document.querySelectorAll(".rotation").forEach((elemRotation) => elemRotation.classList.remove("rotation"));
+
+  //удаляем всем картам событие рестарта 
+  document.querySelectorAll(".card").forEach((card) => card.removeEventListener("click", restartCartTable));
   
   //удалили все карты-копии 
   document.querySelectorAll(".copy").forEach((elem) => elem.remove());
@@ -41,6 +44,13 @@ function setCards (level) {
     let cardN = card.cloneNode(true); // клонирование карты n раз
     cardN.classList.add("copy");
     card.after(cardN);
+  }
+
+  const cardTable = document.getElementById("card-table");
+  if(level > 8) {
+    cardTable.classList.add("card-table_ten");
+  } else if(cardTable.classList.contains("card-table_ten")) {
+    cardTable.classList.remove("card-table_ten");
   }
 
   //одну из карт сделаем багом
