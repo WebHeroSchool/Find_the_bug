@@ -204,7 +204,7 @@
     font: 700 20px/28px 'Roboto', Arial, sans-serif;
     margin-top: 80px;
   }
-  
+
   .cards {
     display: none;
   }
@@ -220,7 +220,7 @@
   .title {
     font: 700 40px/55px 'Roboto', Arial, sans-serif;
   }
-  
+
   .subtitle {
     font: 400 14px/20px 'Roboto', Arial, sans-serif;
     width: 90%;
@@ -234,12 +234,12 @@
     width: 12px;
     height: 12px;
   }
- 
+
   .form-radio input[type=radio]:checked + label::before {
     width: 12px;
     height: 12px;
   }
-  
+
   .menu {
     margin-top: 30px;
     font: 700 35px/49px 'Roboto', Arial, sans-serif;
@@ -251,7 +251,7 @@
     font: 700 22px/30px 'Roboto', Arial, sans-serif;
     margin-top: 80px;
   }
-  
+
   .cards {
     display: flex;
     position: absolute;
@@ -288,7 +288,7 @@
     width: 15px;
     height: 15px;
   }
- 
+
   .form-radio input[type=radio]:checked + label::before {
     width: 15px;
     height: 15px;
@@ -305,14 +305,14 @@
     font: 700 25px/30px 'Roboto', Arial, sans-serif;
     margin-top: 100px;
   }
-  
+
   .cards {
     display: flex;
     position: absolute;
     top: 531px;
     left: 50%;
   }
-  
+
   .card {
     margin: 12px 12px 0 0;
     width: 153px;
