@@ -125,16 +125,19 @@
 
 .shirt-card {
   background: no-repeat url(img/shirt_card.png);
+  background-size: contain;
 }
 
 .bug-card {
   background: no-repeat url(img/bug_card.png);
   transform: rotateY(180deg);
+  background-size: contain;
 }
 
 .game-over-card {
   background: no-repeat url(img/game_over_card.png);
   transform: rotateY(180deg);
+  background-size: contain;
 }
 
 .rotation {
@@ -180,11 +183,11 @@
     margin: 15px 0 0 -39px;
   }
 
-  .btn-level-text:before {
+  .btn-level-text::before {
     width: 10px;
     height: 10px;
   }
- 
+
   .form-radio input[type=radio]:checked + label::before {
     width: 10px;
     height: 10px;
@@ -204,6 +207,12 @@
   
   .cards {
     display: none;
+  }
+
+  .card {
+    margin: 12px 12px 0 0;
+    width: 90px;
+    height: 141px;
   }
 }
 
@@ -226,7 +235,7 @@
     height: 12px;
   }
  
-  .form-radio input[type=radio]:checked + label:before {
+  .form-radio input[type=radio]:checked + label::before {
     width: 12px;
     height: 12px;
   }
@@ -257,12 +266,18 @@
     min-width: 166px;
     min-height: 257px;
   }
+
+  .card {
+    margin: 12px 12px 0 0;
+    width: 135px;
+    height: 211px;
+  }
 }
 
 @media (min-width: 901px) and (max-width: 1024px) {
   .title {
     font: 700 47px/57px 'Roboto', Arial, sans-serif;
- }
+  }
 
   .subtitle {
     font: 400 14px/20px 'Roboto', Arial, sans-serif;
@@ -296,5 +311,11 @@
     position: absolute;
     top: 531px;
     left: 50%;
+  }
+  
+  .card {
+    margin: 12px 12px 0 0;
+    width: 153px;
+    height: 239px;
   }
 }

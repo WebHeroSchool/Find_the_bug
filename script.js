@@ -24,7 +24,7 @@ function getRandomInt(min, max) {
 навешивает событие по рестарту для каждой карты*/
 function rotationCart() {
   this.classList.add("rotation");
-  let cards = document.getElementsByClassName("card");;
+  let cards = document.getElementsByClassName("card");
 
   //удаляем у всех карт событие переворота
   Array.from(cards).forEach((card) => card.removeEventListener("click", rotationCart));
