@@ -192,7 +192,7 @@
     width: 10px;
     height: 10px;
   }
-  
+
   .menu {
     margin-top: 30px;
     font: 700 30px/39px 'Roboto', Arial, sans-serif;
@@ -230,7 +230,7 @@
     margin: 20px 0 0 -39px;
   }
 
-  .btn-level-text:before {
+  .btn-level-text::before {
     width: 12px;
     height: 12px;
   }
@@ -284,12 +284,12 @@
     width: 90%;
   }
 
-  .btn-level-text:before {
+  .btn-level-text::before {
     width: 15px;
     height: 15px;
   }
  
-  .form-radio input[type=radio]:checked + label:before {
+  .form-radio input[type=radio]:checked + label::before {
     width: 15px;
     height: 15px;
   }
