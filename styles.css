@@ -1,0 +1,363 @@
+.main {
+  background: no-repeat url(img/Background.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.main-content {
+  margin: 129px 0 0 96px;
+}
+
+.main-content__title {
+  font: 700 57px/67px 'Roboto', Arial, sans-serif;
+  color: #fff;
+  margin: 0 0;
+}
+
+.main-content__subtitle {
+  font: 400 19px/22px 'Roboto', Arial, sans-serif;
+  color: #fff;
+  margin: 9px 1px;
+}
+
+.main-content__menu {
+  margin-top: 35px;
+  font: 700 50px/59px 'Roboto', Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-level {
+  margin: 24px 0 0 -39px;
+}
+
+.list-level__radio {
+  opacity: 0;
+}
+
+.list-level__label {
+  margin: 24px 0 0 0;
+}
+
+.list-level__label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg)  translateY(-12px);
+  background-color: #d62b2e;
+  margin-right: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+}
+
+.list-level__label:hover::before {
+  opacity: 1;
+}
+
+.list-level input[type=radio]:checked + label::before {
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg) translateY(-12px);
+  background-color: #d62b2e;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 1;
+}
+
+.list-level input[type=radio]:disabled + label::before {
+  filter: grayscale(100%);
+}
+
+.btn-run-game {
+  height: 94px;
+  width: 351px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font: 700 32px/37px 'Roboto', Arial, sans-serif;
+  background-color: #d62b2e;
+  color: #fff;
+  margin-top: 115px;
+}
+
+.main-content__cards {
+  display: flex;
+  position: absolute;
+  top: 531px;
+  left: 61.6%;
+}
+
+.card-img1 {
+  transform: rotate(12deg);
+}
+
+.card-img2 {
+  transform: rotate(39deg);
+  position: relative;
+  right: 36px;
+  top: 18px;
+}
+
+.card-table {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 48.7%;
+  left: 50.7%;
+  width: 67%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+}
+
+.card-table_ten {
+  width: 88%;
+  height: 69%;
+  left: 53.2%;
+  max-width: 1320px;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: transparent;
+  margin: 24px 24px 0 0;
+  width: 218px;
+  height: 341px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.shirt-card {
+  background: no-repeat url(img/shirt_card.png);
+  background-size: contain;
+}
+
+.bug-card {
+  background: no-repeat url(img/bug_card.png);
+  transform: rotateY(180deg);
+  background-size: contain;
+}
+
+.game-over-card {
+  background: no-repeat url(img/game_over_card.png);
+  transform: rotateY(180deg);
+  background-size: contain;
+}
+
+.rotation {
+  transform: rotateY(180deg);
+}
+
+.shirt-card,
+.bug-card,
+.game-over-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.shirt-card:hover {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-30px) rotateZ(-2deg);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.deactivate {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .main {
+    background-size: auto;
+  }
+
+  .main-content {
+    margin: 80px 0 0 50px;
+  }
+
+  .main-content__title {
+    font: 700 35px/45px 'Roboto', Arial, sans-serif;
+  }
+
+  .main-content__subtitle {
+    font: 400 12px/18px 'Roboto', Arial, sans-serif;
+    width: 90%;
+  }
+
+  .list-level {
+    margin: 15px 0 0 -39px;
+  }
+
+  .list-level__label::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .list-level input[type=radio]:checked + label::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .main-content__menu {
+    margin-top: 30px;
+    font: 700 30px/39px 'Roboto', Arial, sans-serif;
+  }
+
+  .btn-run-game {
+    height: 70px;
+    width: 220px;
+    font: 700 20px/28px 'Roboto', Arial, sans-serif;
+    margin-top: 80px;
+  }
+
+  .main-content__cards {
+    display: none;
+  }
+
+  .card {
+    margin: 12px 12px 0 0;
+    width: 90px;
+    height: 141px;
+  }
+
+  .card-table {
+    top: 32%;
+  }
+
+  .card-table_ten {
+    height: 37%;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 945px) {
+  .main {
+    background-size: auto;
+  }
+
+  .main-content__title {
+    font: 700 40px/55px 'Roboto', Arial, sans-serif;
+  }
+
+  .main-content__subtitle {
+    font: 400 14px/20px 'Roboto', Arial, sans-serif;
+    width: 90%;
+  }
+
+  .list-level {
+    margin: 20px 0 0 -39px;
+  }
+
+  .list-level__label::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .list-level input[type=radio]:checked + label::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .main-content__menu {
+    margin-top: 30px;
+    font: 700 35px/49px 'Roboto', Arial, sans-serif;
+  }
+
+  .btn-run-game {
+    height: 80px;
+    width: 250px;
+    font: 700 22px/30px 'Roboto', Arial, sans-serif;
+    margin-top: 80px;
+  }
+
+  .main-content__cards {
+    display: flex;
+    position: absolute;
+    top: 531px;
+    left: 50%;
+  }
+
+  .card-img2,
+  .card-img1 {
+    width: 20vw;
+    height: 23vw;
+    min-width: 166px;
+    min-height: 257px;
+  }
+
+  .card {
+    margin: 12px 12px 0 0;
+    width: 135px;
+    height: 211px;
+  }
+
+  .card-table {
+    top: 45%;
+  }
+
+  .card-table_ten {
+    height: 49%;
+  }
+}
+
+@media (min-width: 946px) and (max-width: 1385px) {
+  .main {
+    background-size: auto;
+  }
+
+  .main-content__title {
+    font: 700 47px/57px 'Roboto', Arial, sans-serif;
+  }
+
+  .main-content__subtitle {
+    font: 400 14px/20px 'Roboto', Arial, sans-serif;
+    width: 90%;
+  }
+
+  .list-level__label::before {
+    width: 15px;
+    height: 15px;
+  }
+
+  .list-level input[type=radio]:checked + label::before {
+    width: 15px;
+    height: 15px;
+  }
+
+  .main-content__menu {
+    margin-top: 30px;
+    font: 700 40px/59px 'Roboto', Arial, sans-serif;
+  }
+
+  .btn-run-game {
+    height: 90px;
+    width: 300px;
+    font: 700 25px/30px 'Roboto', Arial, sans-serif;
+    margin-top: 100px;
+  }
+
+  .main-content__cards {
+    display: flex;
+    position: absolute;
+    top: 531px;
+    left: 50%;
+  }
+
+  .card {
+    margin: 12px 12px 0 0;
+    width: 153px;
+    height: 239px;
+  }
+
+  .card-table_ten {
+    height: 50%;
+    max-width: 867px;
+  }
+}
