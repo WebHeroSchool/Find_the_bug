@@ -1,4 +1,4 @@
-let content = document.getElementById("content");
+let content = document.getElementById("main-content");
 let cardTable = document.getElementById("card-table");
 
 function getRandomInt(min, max) {

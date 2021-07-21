@@ -5,23 +5,23 @@
   background-size: cover;
 }
 
-.content {
+.main-content {
   margin: 129px 0 0 96px;
 }
 
-.title {
+.main-content__title {
   font: 700 57px/67px 'Roboto', Arial, sans-serif;
   color: #fff;
   margin: 0 0;
 }
 
-.subtitle {
+.main-content__subtitle {
   font: 400 19px/22px 'Roboto', Arial, sans-serif;
   color: #fff;
   margin: 9px 1px;
 }
 
-.menu {
+.main-content__menu {
   margin-top: 35px;
   font: 700 50px/59px 'Roboto', Arial, sans-serif;
   color: #fff;
@@ -29,19 +29,19 @@
   flex-direction: column;
 }
 
-.form-radio {
+.list-level {
   margin: 24px 0 0 -39px;
 }
 
-.difficulty-level {
+.list-level__radio {
   opacity: 0;
 }
 
-.btn-level-text {
+.list-level__label {
   margin: 24px 0 0 0;
 }
 
-.btn-level-text::before {
+.list-level__label::before {
   content: '';
   display: inline-block;
   width: 18px;
@@ -54,11 +54,11 @@
   opacity: 0;
 }
 
-.btn-level-text:hover::before {
+.list-level__label:hover::before {
   opacity: 1;
 }
 
-.form-radio input[type=radio]:checked + label::before {
+.list-level input[type=radio]:checked + label::before {
   width: 18px;
   height: 18px;
   transform: rotate(45deg) translateY(-12px);
@@ -68,11 +68,11 @@
   opacity: 1;
 }
 
-.form-radio input[type=radio]:disabled + label::before {
+.list-level input[type=radio]:disabled + label::before {
   filter: grayscale(100%);
 }
 
-.btn {
+.btn-run-game {
   height: 94px;
   width: 351px;
   border: none;
@@ -84,7 +84,7 @@
   margin-top: 115px;
 }
 
-.cards {
+.main-content__cards {
   display: flex;
   position: absolute;
   top: 531px;
@@ -179,46 +179,46 @@
     background-size: auto;
   }
 
-  .content {
+  .main-content {
     margin: 80px 0 0 50px;
   }
 
-  .title {
+  .main-content__title {
     font: 700 35px/45px 'Roboto', Arial, sans-serif;
   }
 
-  .subtitle {
+  .main-content__subtitle {
     font: 400 12px/18px 'Roboto', Arial, sans-serif;
     width: 90%;
   }
 
-  .form-radio {
+  .list-level {
     margin: 15px 0 0 -39px;
   }
 
-  .btn-level-text::before {
+  .list-level__label::before {
     width: 10px;
     height: 10px;
   }
 
-  .form-radio input[type=radio]:checked + label::before {
+  .list-level input[type=radio]:checked + label::before {
     width: 10px;
     height: 10px;
   }
 
-  .menu {
+  .main-content__menu {
     margin-top: 30px;
     font: 700 30px/39px 'Roboto', Arial, sans-serif;
   }
 
-  .btn {
+  .btn-run-game {
     height: 70px;
     width: 220px;
     font: 700 20px/28px 'Roboto', Arial, sans-serif;
     margin-top: 80px;
   }
 
-  .cards {
+  .main-content__cards {
     display: none;
   }
 
@@ -242,42 +242,42 @@
     background-size: auto;
   }
 
-  .title {
+  .main-content__title {
     font: 700 40px/55px 'Roboto', Arial, sans-serif;
   }
 
-  .subtitle {
+  .main-content__subtitle {
     font: 400 14px/20px 'Roboto', Arial, sans-serif;
     width: 90%;
   }
 
-  .form-radio {
+  .list-level {
     margin: 20px 0 0 -39px;
   }
 
-  .btn-level-text::before {
+  .list-level__label::before {
     width: 12px;
     height: 12px;
   }
 
-  .form-radio input[type=radio]:checked + label::before {
+  .list-level input[type=radio]:checked + label::before {
     width: 12px;
     height: 12px;
   }
 
-  .menu {
+  .main-content__menu {
     margin-top: 30px;
     font: 700 35px/49px 'Roboto', Arial, sans-serif;
   }
 
-  .btn {
+  .btn-run-game {
     height: 80px;
     width: 250px;
     font: 700 22px/30px 'Roboto', Arial, sans-serif;
     margin-top: 80px;
   }
 
-  .cards {
+  .main-content__cards {
     display: flex;
     position: absolute;
     top: 531px;
@@ -312,38 +312,38 @@
     background-size: auto;
   }
 
-  .title {
+  .main-content__title {
     font: 700 47px/57px 'Roboto', Arial, sans-serif;
   }
 
-  .subtitle {
+  .main-content__subtitle {
     font: 400 14px/20px 'Roboto', Arial, sans-serif;
     width: 90%;
   }
 
-  .btn-level-text::before {
+  .list-level__label::before {
     width: 15px;
     height: 15px;
   }
 
-  .form-radio input[type=radio]:checked + label::before {
+  .list-level input[type=radio]:checked + label::before {
     width: 15px;
     height: 15px;
   }
 
-  .menu {
+  .main-content__menu {
     margin-top: 30px;
     font: 700 40px/59px 'Roboto', Arial, sans-serif;
   }
 
-  .btn {
+  .btn-run-game {
     height: 90px;
     width: 300px;
     font: 700 25px/30px 'Roboto', Arial, sans-serif;
     margin-top: 100px;
   }
 
-  .cards {
+  .main-content__cards {
     display: flex;
     position: absolute;
     top: 531px;

@@ -8,28 +8,28 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body class="main">
-  <div class = "content" id="content">
-      <h2 class = "title">Выберите уровень сложности:</h2>
-      <p class = "subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
-      <div class="menu">
-        <div class="form-radio">
-          <input class="difficulty-level" type="radio" name = "level" value="3" id="level-1">
-          <label class="btn-level-text" for="level-1"> Простой </label>
+  <div class = "main-content" id="main-content">
+      <h2 class = "main-content__title">Выберите уровень сложности:</h2>
+      <p class = "main-content__subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+      <div class="main-content__menu">
+        <div class="list-level">
+          <input class="list-level__radio" type="radio" name = "level" value="3" id="level-1">
+          <label class="list-level__label" for="level-1"> Простой </label>
         </div>
         
-        <div class="form-radio">
-          <input class="difficulty-level" type="radio" name = "level" value="6" id="level-2">
-          <label class="btn-level-text" for="level-2"> Средний </label>
+        <div class="list-level">
+          <input class="list-level__radio" type="radio" name = "level" value="6" id="level-2">
+          <label class="list-level__label" for="level-2"> Средний </label>
         </div>
         
-        <div class="form-radio">
-          <input class="difficulty-level" type="radio" name = "level" value="9" id="level-3">
-          <label class="btn-level-text" for="level-3"> Сложный </label>
+        <div class="list-level">
+          <input class="list-level__radio" type="radio" name = "level" value="9" id="level-3">
+          <label class="list-level__label" for="level-3"> Сложный </label>
         </div>
         
       </div>
-      <button class="btn" onclick="openCardTable()">Начать игру</button>
-      <div class="cards">
+      <button class="btn-run-game" onclick="openCardTable()">Начать игру</button>
+      <div class="main-content__cards">
         <img class="card-img1" src="img/shirt_card.png" alt="card">
         <img class="card-img2" src="img/shirt_card.png" alt="card">
       </div>
